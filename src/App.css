@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+
+  table,
+  th,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  th {
+    display: none;
+    /* Hide header in mobile view */
+  }
+
+  td {
+    position: relative;
+    padding-left: 50%;
+    /* Add padding for better visibility */
+  }
+
+  td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  nav {
+    text-align: center;
+  }
+
+  button {
+    width: 100%;
+    /* Full width buttons for mobile */
+    margin: 5px 0;
+    /* Add margin for spacing */
+  }
+}
